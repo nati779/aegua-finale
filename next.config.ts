@@ -1,9 +1,12 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  experimental: {
-    optimizePackageImports: ["framer-motion", "lucide-react"],
+  output: 'export',           // Questo crea i file statici
+  images: {
+    unoptimized: true,        // Necessario per GitHub Pages
   },
+  basePath: '/aegua-finale',   // Nome esatto del tuo repository
+  assetPrefix: '/aegua-finale/',
 };
 
 export default nextConfig;
